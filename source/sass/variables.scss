@@ -1,0 +1,77 @@
+// Colors
+//---------------------------------
+// https://www.htmlcsscolor.com/hex/334482
+
+// Default
+
+$color-default-black:      #000000;
+$color-default-white:      #ffffff;
+$color-transparent:        rgba(255, 255, 255, 0);
+
+// Base
+$color-black-russian:      #1b1d32;
+$color-paua:               #2a2651;
+$color-storm-grey:         #6d768c;
+$color-solitude:           #f1f3f7;
+$color-solitude2:          #e9edf6;
+$color-alice-blue:         #fafbfd;
+$color-alice-blue2:        #e9f4ff;
+$color-periwinkle:         #c9d2ea;
+$color-wild-blue-yonder:   #7e83ae;
+$color-ship-cove:          #757aa4;
+$color-viking:             #39b6c0;
+$color-medium-trquoise:    #33c1cc;
+$color-pelorous:           #218cad;
+$color-pelorous2:          #31a9ba;
+$color-cerulean:           #0c669c;
+$color-cerulean2:          #1a80a8;
+$color-lochmara:           #197299;
+$color-steel-blue:         #4e7db2;
+$color-pacific-blue:       #028ece;
+$color-navy-blue:          #0f80c4;
+$color-dodger-blue:        #1773ea;
+$color-astronaut-blue:     #154257;
+$color-dark-magenta:       #a51da8;
+$color-medium-sea-green:   #40ac69;
+$color-summer-sky:         #36a1d4;
+$color-selective-yellow:   #ffb800;
+$color-red-orange:         #fc3f1d;
+
+// Gradient
+
+$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$cerulean-viking-to-right: linear-gradient(90deg, #0c669c 0%, #3bbac2 100%);
+$viking-viking-to-right: linear-gradient(0deg, #39b6c0, #39b6c0);
+$alice-blue-to-solitude-to-right: linear-gradient(182.14deg, #f1f8ff 1.82%, rgba(233, 237, 246, 0) 98.25%);
+$pattens-blue-to-alice-blue-to-right: linear-gradient(270.08deg, #deedf6 0.08%, #f9fbff 99.95%);
+$astronaut-blue-to-astronaut-blue-to-right: linear-gradient(0deg, rgba(2, 142, 207, 0.32), rgba(2, 142, 206, 0.32));
+$default-white-to-default-white-transparent-to-top: linear-gradient(360deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+$cerulean-transparent-to-viking-transparent-to-right: linear-gradient(90deg, rgba(12, 102, 156, 0.9) 0%, rgba(59, 186, 194, 0.9) 100%);
+
+// Typography
+//---------------------------------
+
+$font-family--muller: "Muller", "Arial", sans-serif;
+$font-family--circe: "Circe", "Verdana", sans-serif;
+$font-family--pt-rouble-sans: "PT-Rouble-sans", "Verdana", sans-serif;
+
+// Animation
+//---------------------------------
+
+$default-transition-settings: 0.3s ease;
+$modal-transition-settings: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+
+// Viewports
+//---------------------------------
+
+$viewport--sm: 320px;
+$viewport--md: 768px;
+$viewport--lg: 1024px;
+$viewport--xl: 1440px;
+$viewport--xxl: 1920px;
+
+// Retina
+//---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

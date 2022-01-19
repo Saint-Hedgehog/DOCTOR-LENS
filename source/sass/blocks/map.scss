@@ -1,0 +1,50 @@
+.map {
+  position: relative;
+  margin: 0 auto;
+  padding-top: 2px;
+}
+
+.map__list {
+  position: absolute;
+  top: 47px;
+  left: 41.53%;
+  z-index: 1;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.map__item {
+  margin-right: 22px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.map__btn {
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+.map__tab-content.hidden {
+  display: none;
+}
+
+.map__iframe {
+  min-height: 600px;
+}
+
+.map__iframe iframe {
+  width: 100%;
+  margin-bottom: -8px;
+  border: 0;
+}
+
+.load-map {
+  background-image: url("../img/svg/loading.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}

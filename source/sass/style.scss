@@ -1,0 +1,59 @@
+// Vendor
+//---------------------------------
+
+@import "vendor/normalize";
+@import "vendor/swiper";
+
+// Global
+//---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/container";
+@import "global/functions";
+
+// Blocks
+//---------------------------------
+
+@import "blocks/header";
+@import "blocks/address";
+@import "blocks/search";
+@import "blocks/btn";
+@import "blocks/main-nav";
+@import "blocks/intro";
+@import "blocks/service";
+@import "blocks/diseases";
+@import "blocks/doctors";
+@import "blocks/rating";
+@import "blocks/sign-up";
+@import "blocks/form";
+@import "blocks/select";
+@import "blocks/video";
+@import "blocks/about";
+@import "blocks/advantage";
+@import "blocks/license";
+@import "blocks/diagram";
+@import "blocks/reviews";
+@import "blocks/night-lenses";
+@import "blocks/night-advantage";
+@import "blocks/map";
+@import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-increase";
+@import "blocks/modal-disease";
+@import "blocks/modal-call-back";
+
+// используйте это для отключения ховеров на тач устройствах
+// ! но не используйте это для текстовых полей ( input, textarea )
+// также для любых transition обязательно указывайте transition-property
+// transition: color $default-transition-settings, а не transition: $default-transition-settings
+
+/* @media (hover: hover), screen and (min-width: 0\0) {
+  &:hover,
+  &:focus {
+    color: red;
+  }
+} */

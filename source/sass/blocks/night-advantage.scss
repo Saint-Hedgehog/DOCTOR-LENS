@@ -1,0 +1,202 @@
+.night-advantage {
+  margin: 0 auto;
+  padding: 74px 16.41% 78px;
+  // background-image: image-set(
+  //     url("../img/bg/night-advantage-sky@2x.webp") type("image/webp") 2x,
+  //     url("../img/bg/night-advantage-sky@1x.webp") type("image/webp") 1x,
+  //     url("../img/bg/night-advantage-sky@2x.png") 2x,
+  //     url("../img/bg/night-advantage-sky@1x.png") 1x
+  //   ),
+  //   $cerulean-viking-to-right;
+  background-image: url("../img/bg/night-advantage-sky@1x.webp"),
+    $cerulean-viking-to-right;
+  // background-repeat: no-repeat;
+  background-position: center top 5px, center;
+  background-size: auto; //cover лучше, но по пиксель перфект
+
+  @include retina {
+    background-image: url("../img/bg/night-advantage-sky@2x.webp"),
+      $cerulean-viking-to-right;
+    background-size: 100%; //cover лучше, но по пиксель перфект
+  }
+
+  @include viewport--lg {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+.night-advantage h2 {
+  display: block;
+  max-width: 640px;
+  margin: 0 auto 7px;
+  padding-right: 34px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+
+  @include typography(30, 36);
+  text-align: center;
+  color: $color-default-white;
+}
+
+.night-advantage > p {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto 107px;
+  padding-right: 43px;
+  font-size: 16px;
+  line-height: 26px;
+
+  @include typography(16, 26);
+  text-align: center;
+  color: $color-periwinkle;
+}
+
+.night-advantage__block {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 30px;
+}
+
+.night-advantage__item {
+  position: relative;
+  display: block;
+  padding: 34px 10% 21px;
+  background-color: $color-default-white;
+  box-shadow: 0 2px 10px rgba(78, 127, 222, 0.2);
+  border-radius: 6px;
+  transition: box-shadow $default-transition-settings;
+}
+
+.night-advantage__item:nth-child(4n + 3) > img,
+.night-advantage__item:nth-child(4n + 4) > img {
+  margin-top: 4px;
+  margin-bottom: -4px;
+}
+
+.night-advantage__item > p {
+  margin: 0;
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include typography(16, 20);
+}
+
+.night-advantage__item-background {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  min-height: 276px;
+  padding: 119px 10% 40px;
+  background-color: $color-default-white;
+  border-radius: 6px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.night-advantage__img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  background-image: url("../img/svg/loading.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(0);
+}
+
+.night-advantage__img-container img {
+  width: 100%;
+  height: 103px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  object-fit: cover;
+}
+
+.night-advantage__item svg {
+  position: absolute;
+  bottom: -15px;
+  left: 30px;
+  z-index: 2;
+  display: block;
+  width: 33px;
+  height: 33px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity $default-transition-settings,
+    visibility $default-transition-settings;
+}
+
+.night-advantage__item:hover,
+.night-advantage__item:focus {
+  box-shadow: none;
+  transition: box-shadow $default-transition-settings;
+}
+
+.night-advantage__item:focus {
+  outline: 0;
+}
+
+.night-advantage__item:hover .night-advantage__item-background,
+.night-advantage__item:focus .night-advantage__item-background,
+.night-advantage__item:hover .night-advantage__img-container,
+.night-advantage__item:focus .night-advantage__img-container,
+.night-advantage__item:hover svg,
+.night-advantage__item:focus svg {
+  opacity: 1;
+  visibility: visible;
+}
+
+.night-advantage__item:hover .night-advantage__item-background,
+.night-advantage__item:focus .night-advantage__item-background {
+  box-shadow: 0 2px 10px rgba(78, 127, 222, 0.2);
+  transition: box-shadow $default-transition-settings;
+}
+
+.night-advantage__item:hover .night-advantage__img-container,
+.night-advantage__item:focus .night-advantage__img-container {
+  transform: translateY(-70px);
+}
+
+.night-advantage__item:hover .night-advantage__item-background h3,
+.night-advantage__item:focus .night-advantage__item-background h3,
+.night-advantage__item:hover .night-advantage__item-background p,
+.night-advantage__item:focus .night-advantage__item-background p {
+  transform: translateY(0);
+  transition: transform $default-transition-settings;
+}
+
+.night-advantage__item-background h3 {
+  margin: 0;
+  margin-bottom: 11px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include typography(16, 20);
+  color: $color-black-russian;
+  transform: translateY(70px);
+  transition: transform $default-transition-settings;
+}
+
+.night-advantage__item-background p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+
+  @include typography(13, 20);
+  color: $color-storm-grey;
+  transform: translateY(70px);
+  transition: transform $default-transition-settings;
+}

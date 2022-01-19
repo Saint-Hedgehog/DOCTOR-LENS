@@ -1,0 +1,80 @@
+.diagram {
+  margin: 0 auto;
+  padding: 109px 16.41% 74px;
+
+  @include viewport--lg {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+.diagram h2 {
+  margin: 0;
+  margin-bottom: 51px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 24px;
+
+  @include typography(30, 24);
+  text-align: center;
+  color: $color-paua;
+}
+
+.diagram__flex-container {
+  display: flex;
+  padding: 0 24px;
+}
+
+.diagram__flex-item {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.diagram__flex-item canvas {
+  margin-right: 12px;
+}
+
+.diagram__flex-item img {
+  margin-top: 6px;
+  margin-bottom: -1px;
+}
+
+.diagram__flex-item--prodoctorov img {
+  height: 25px;
+}
+
+.diagram__flex-item a {
+  font-size: 12px;
+  line-height: 24px;
+
+  @include typography(12, 24);
+  color: $color-paua;
+  border-bottom: 1px dashed $color-wild-blue-yonder;
+  opacity: 1;
+  transition: opacity $default-transition-settings;
+
+  &:hover {
+    opacity: 0.7;
+    transition: opacity $default-transition-settings;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-black-russian;
+    outline-offset: 5px;
+    transition: outline-offset $default-transition-settings;
+  }
+
+  &:active {
+    opacity: 0.5;
+    transition: opacity $default-transition-settings;
+  }
+}

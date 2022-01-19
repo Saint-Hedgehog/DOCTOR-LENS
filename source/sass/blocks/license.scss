@@ -1,0 +1,134 @@
+.license {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 54px 16.41% 46px;
+  background-image: $pattens-blue-to-alice-blue-to-right;
+
+  @include viewport--lg {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+.license h2 {
+  margin: 5px 0 11px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 24px;
+
+  @include typography(36, 24);
+  color: $color-black-russian;
+}
+
+.license p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+
+  @include typography(16, 26);
+  color: $color-black-russian;
+}
+
+.license > div > p {
+  margin-bottom: 40px;
+}
+
+.license__ok {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 332px));
+  gap: 15px;
+}
+
+.license__article {
+  position: relative;
+  padding-left: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 12px;
+    height: 100%;
+    background: linear-gradient(
+      270deg,
+      rgba(170, 180, 206, 0.29) 0%,
+      rgba(201, 210, 234, 0) 100%
+    );
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+}
+
+.license__article p {
+  margin-top: 13px;
+  margin-bottom: 0;
+}
+
+.license__img-container {
+  position: relative;
+  align-self: center;
+  margin: 0 25px;
+  background-image: url("../img/svg/loading.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0 2px 20px rgba(78, 127, 222, 0.2));
+  cursor: zoom-in;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 10px solid $color-default-white;
+  }
+
+  &:hover::before,
+  &:focus::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: $astronaut-blue-to-astronaut-blue-to-right;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-black-russian;
+    outline-offset: 5px;
+    transition: outline-offset $default-transition-settings;
+  }
+
+  &:active {
+    opacity: 0.5;
+    transition: opacity $default-transition-settings;
+  }
+}
+
+.license__img-container svg {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: calc(50% - 20px);
+  z-index: 1;
+  display: none;
+  fill: $color-default-white;
+}
+
+.license__img-container:hover svg,
+.license__img-container:focus svg {
+  display: block;
+}

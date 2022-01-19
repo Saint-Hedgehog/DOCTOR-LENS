@@ -1,0 +1,358 @@
+.intro {
+  position: relative;
+  padding-right: 16.46%;
+  padding-left: 16.41%;
+  background-image: $cerulean-viking-to-right;
+
+  @include viewport--lg {
+    padding: 0 6%;
+  }
+}
+
+.intro__slider {
+  width: 100%;
+}
+
+.intro__slide {
+  display: flex;
+  justify-content: space-between;
+  height: 637px;
+  padding-top: 110px;
+  padding-bottom: 180px;
+}
+
+.intro__slide h2 {
+  width: max-content;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 66px;
+
+  @include typography(56, 66);
+  color: $color-default-white;
+}
+
+.intro__slide h2 > span {
+  font-weight: 500;
+}
+
+.intro__slide--2 h2 {
+  margin-top: 8px;
+  margin-bottom: 16px;
+  font-size: 50px;
+  line-height: 56px;
+
+  @include typography(50, 56);
+}
+
+.intro__slide p {
+  width: max-content;
+  max-width: 520px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+
+  @include typography(16, 26);
+  color: $color-default-white;
+}
+
+.intro__slide h2 + p {
+  margin-bottom: 56px;
+}
+
+.intro__slide--2 h2 + p,
+.intro__slide--3 h2 + p,
+.intro__slide--4 h2 + p {
+  margin-left: 1px;
+  font-family: $font-family--circe;
+  font-size: 18px;
+  line-height: 26px;
+
+  @include typography(18, 26);
+}
+
+.intro__slide--2 h2 + p {
+  margin-bottom: 25px;
+}
+
+.intro__slide--3 h2 + p,
+.intro__slide--4 h2 + p {
+  margin-bottom: 68px;
+}
+
+.intro__column {
+  margin-right: 5px;
+  padding-top: 14px;
+}
+
+.intro__slide--2 .intro__column {
+  margin-right: 21px;
+  padding-top: 12px;
+}
+
+.intro__slide--3 .intro__column {
+  margin-right: 40px;
+  padding-top: 12px;
+}
+
+.intro__slide--4 .intro__column {
+  margin-right: 68px;
+  padding-top: 121px;
+}
+
+.intro__column p {
+  font-size: 16px;
+  line-height: 22px;
+
+  @include typography(16, 22);
+}
+
+.intro__column p > span {
+  font-weight: 500;
+  font-size: 46px;
+  line-height: 26px;
+
+  @include typography(46, 26);
+}
+
+.intro__column p:first-child {
+  margin-bottom: 55px;
+}
+
+.intro__slide--2 .intro__column p:first-child {
+  margin-bottom: 70px;
+}
+
+.intro__slide--3 .intro__column p:first-child {
+  margin-bottom: 59px;
+}
+
+.intro__slide--4 .intro__column p:first-child {
+  margin-bottom: 15px;
+}
+
+.intro__column p:nth-child(3n + 2) {
+  margin-bottom: 83px;
+}
+
+.intro__slide--2 .intro__column p:nth-child(3n + 2) {
+  margin-bottom: 99px;
+}
+
+.intro__slide--3 .intro__column p:nth-child(3n + 2) {
+  margin-bottom: 80px;
+}
+
+.intro__slide--4 .intro__column p:nth-child(3n + 2) {
+  margin-bottom: 0;
+}
+
+.intro__column p:nth-child(3n + 2) span:last-of-type {
+  display: block;
+  margin-top: 9px;
+  margin-bottom: -17px;
+}
+
+.intro__slide--4 p:nth-child(3n + 2) span:last-of-type {
+  display: inline-block;
+}
+
+.intro__column p:nth-child(3n + 2) span:first-child {
+  font-size: 18px;
+  line-height: 26px;
+
+  @include typography(18, 26);
+}
+
+.intro__slide--2 p:nth-child(3n + 2) span:first-child,
+.intro__slide--3 p:nth-child(3n + 2) span:first-child,
+.intro__slide--4 p:nth-child(3n + 2) span:first-child {
+  font-size: 46px;
+  line-height: 46px;
+
+  @include typography(46, 46);
+  margin-bottom: -27px;
+}
+
+.intro__slide--3 p:nth-child(3n + 3) > span:first-child {
+  margin-right: 7px;
+  font-size: 24px;
+  line-height: 26px;
+
+  @include typography(24, 26);
+}
+
+.intro__slide--3 p span span,
+.intro__slide--4 p span span {
+  font-family: $font-family--pt-rouble-sans;
+}
+
+.intro__slider .intro__pagination {
+  position: absolute;
+  bottom: 36px;
+  left: 16.4%;
+  z-index: 2;
+  display: flex;
+
+  @include viewport--lg {
+    left: 6%;
+  }
+}
+
+.intro__pagination-item {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1px;
+  opacity: 1;
+  transition: opacity $default-transition-settings;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: -8px;
+    left: -7px;
+    width: 94px;
+    height: 6px;
+    padding: 11px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    transition: opacity $default-transition-settings;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-black-russian;
+    outline-offset: 5px;
+    transition: outline-offset $default-transition-settings;
+  }
+
+  &:active {
+    opacity: 0.5;
+    transition: opacity $default-transition-settings;
+  }
+}
+
+.intro__pagination-current-item {
+  background-color: $color-default-white;
+  pointer-events: none;
+}
+
+.intro__button-prev,
+.intro__button-next {
+  position: absolute;
+  top: 38.5%;
+  z-index: 1;
+  display: block;
+  width: 76px;
+  height: 76px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color $default-transition-settings;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: background-color $default-transition-settings;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-black-russian;
+    outline-offset: 5px;
+    transition: outline-offset $default-transition-settings;
+  }
+
+  &:active {
+    opacity: 0.5;
+    transition: opacity $default-transition-settings;
+  }
+}
+
+.intro__button-prev svg,
+.intro__button-next svg {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: block;
+  width: 28px;
+  height: 14px;
+  transform: translate(-50%, -50%);
+  fill: $color-default-white;
+  transition: fill $default-transition-settings;
+}
+
+.intro__button-prev.swiper-button-disabled,
+.intro__button-next.swiper-button-disabled {
+  background-color: transparent;
+  opacity: 0.5;
+  pointer-events: none;
+
+  &::before {
+    display: none;
+  }
+}
+
+.intro__button-prev {
+  left: 44px;
+  right: auto;
+  transform: rotate(180deg);
+
+  @include viewport--lg {
+    left: 5px;
+  }
+}
+
+.intro__button-next {
+  right: 23px;
+  left: auto;
+
+  @include viewport--lg {
+    right: 5px;
+  }
+}
+
+.intro__img-container {
+  position: absolute;
+  bottom: -1px;
+  left: 32.4%;
+  z-index: -1;
+  display: block;
+  margin-right: -34px;
+}
+
+.intro__slide--2 .intro__img-container {
+  left: 10.53%;
+  margin-right: -14px;
+}
+
+.intro__slide--3 .intro__img-container {
+  bottom: 0;
+  left: 30.1%;
+  margin-right: 0;
+}
+
+.intro__slide--4 .intro__img-container {
+  bottom: 0;
+  left: 13.6%;
+  margin-right: -76px;
+}

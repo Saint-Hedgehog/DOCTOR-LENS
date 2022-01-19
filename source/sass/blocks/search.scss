@@ -1,0 +1,99 @@
+.search {
+  position: relative;
+}
+
+.search form {
+  position: absolute;
+  top: -18px;
+  right: 0;
+  z-index: 1;
+  width: 52px;
+  transition: width $default-transition-settings;
+}
+
+.search form:hover,
+.search form:focus-within {
+  width: 50.86%;
+  transition: width $default-transition-settings;
+}
+
+.search form:hover .search__submit,
+.search form:focus-within .search__submit {
+  background-color: $color-default-white;
+}
+
+.search form:hover input[type="text"],
+.search form:focus-within input[type="text"] {
+  padding-left: 17px;
+  padding-right: 53px;
+  transition: padding-left $default-transition-settings,
+    padding-right $default-transition-settings;
+}
+
+.search fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.search input[type="text"] {
+  width: 100%;
+  height: 36px;
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+
+  @include typography(14, 24);
+  color: transparent;
+  background-color: transparent;
+  visibility: hidden;
+  outline: 0;
+
+  transition: padding-left $default-transition-settings,
+    padding-right $default-transition-settings;
+
+  &::placeholder {
+    color: $color-storm-grey;
+  }
+}
+
+.search:hover input[type="text"],
+.search:focus-within input[type="text"] {
+  background-color: $color-default-white;
+  color: $color-black-russian;
+  visibility: visible;
+
+  &::placeholder {
+    color: $color-storm-grey;
+  }
+}
+
+.search__submit {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 8px 16px 3px;
+  border: 0;
+  background-color: $color-solitude;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-black-russian;
+    outline-offset: 4px;
+    transition: outline-offset $default-transition-settings;
+  }
+
+  &:active {
+    opacity: 0.5;
+    transition: opacity $default-transition-settings;
+  }
+}
+
+.search__submit svg {
+  fill: #0f80c4;
+}

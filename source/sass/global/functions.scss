@@ -1,0 +1,19 @@
+// ========== REM ==========
+@function rem($size) {
+  @return $size / 16 * 1rem;
+}
+
+// ========== EM ==========
+@function em($size) {
+  @return $size / 16 * 1em;
+}
+
+// ========== PRC ==========
+@function prc($size1, $size2) {
+  @return $size1 / $size2 * 100%;
+}
+
+// ========== DIV ==========
+@function div($size1, $size2) {
+  @return $size1 / $size2;
+}

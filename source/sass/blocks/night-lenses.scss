@@ -1,0 +1,172 @@
+.night-lenses {
+  margin: 0 auto;
+  padding: 100px 16.41% 100px;
+  // background-image: image-set(
+  //   // url('../img/bg/night-lenses-baby@2x.avif') type('image/avif') 2x,
+  //   // url('../img/bg/night-lenses-baby@1x.avif') type('image/avif') 1x,
+  //   url("../img/bg/night-lenses-baby@2x.webp") type("image/webp") 2x,
+  //   url("../img/bg/night-lenses-baby@1x.webp") type("image/webp") 1x,
+  //   url("../img/bg/night-lenses-baby@2x.png") 2x,
+  //   url("../img/bg/night-lenses-baby@1x.png") 1x
+  // );
+  background-image: url("../img/bg/night-lenses-baby@1x.webp");
+  background-repeat: no-repeat;
+  background-position: left 49.99% top 180px;
+  background-size: 25.68% auto;
+
+  @include retina {
+    background-image: url("../img/bg/night-lenses-baby@2x.webp");
+    background-size: 25.68% auto;
+  }
+
+  @include viewport--lg {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+.night-lenses h2 {
+  margin: 12px 0 2px;
+  padding-right: 105px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 28px;
+
+  @include typography(36, 28);
+  text-align: center;
+  color: $color-black-russian;
+}
+
+.night-lenses > p {
+  margin: 0;
+  margin-bottom: 156px;
+  padding-right: 88px;
+  font-size: 28px;
+  line-height: 28px;
+
+  @include typography(28, 28);
+  text-align: center;
+  color: $color-ship-cove;
+}
+
+.night-lenses__advantage-container {
+  display: grid;
+  grid-template-columns: 23.25% 23.25%;
+  column-gap: 53.5%;
+  row-gap: 111px;
+  margin-bottom: 127px;
+}
+
+.night-lenses__advantage:nth-of-type(4n + 1),
+.night-lenses__advantage:nth-of-type(4n + 3) {
+  text-align: end;
+}
+
+.night-lenses__advantage:nth-of-type(4n + 2) {
+  margin-left: -4px;
+}
+
+.night-lenses__advantage:nth-of-type(4n + 3) {
+  margin-right: 4px;
+  margin-top: -10px;
+}
+
+.night-lenses__advantage h3 {
+  position: relative;
+  margin: 0;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+
+  @include typography(16, 20);
+  color: $color-paua;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -69px;
+    z-index: 1;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/bg/night-lenses-plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+  }
+}
+
+.night-lenses__advantage:nth-child(4n + 3) h3 {
+  margin-bottom: 7px;
+}
+
+.night-lenses__advantage:nth-child(4n + 4) h3 {
+  margin-bottom: 12px;
+}
+
+.night-lenses__advantage:nth-child(4n + 1) h3::before,
+.night-lenses__advantage:nth-child(4n + 3) h3::before {
+  left: calc(100% + 9px);
+}
+
+.night-lenses__advantage:nth-child(4n + 3) h3::before {
+  top: 4px;
+}
+
+.night-lenses__advantage p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 20px;
+
+  @include typography(15, 20);
+  color: $color-ship-cove;
+}
+
+.night-lenses h4 {
+  margin: 0;
+  margin-bottom: 27px;
+  padding-right: 3px;
+  font-weight: normal;
+  font-size: 46px;
+  line-height: 20px;
+
+  @include typography(46, 20);
+  text-align: center;
+  color: $color-black-russian;
+  filter: blur(10px);
+  transition: filter $default-transition-settings;
+
+  &:hover {
+    filter: blur(0);
+    transition: filter $default-transition-settings;
+  }
+}
+
+.night-lenses__btn {
+  left: -2px;
+  display: block;
+  margin: 0 auto;
+  padding: 18px 63px 16px 31px;
+  text-align: center;
+  background-image: $cerulean-viking-to-right;
+  background-color: $color-cerulean;
+  background-position: 0;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 10px rgba(2, 142, 206, 0.32);
+  transition: background-position $default-transition-settings;
+
+  &:hover {
+    color: $color-default-white;
+    background-color: $color-cerulean;
+    background-position: 200px;
+    transition: background-position $default-transition-settings,
+      background-color $default-transition-settings;
+  }
+}
+
+.night-lenses__btn svg {
+  top: 19px;
+  right: 31px;
+}

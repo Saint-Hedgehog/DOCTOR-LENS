@@ -1,0 +1,273 @@
+<header class="header @@if (context.mod) { header--@@mod }">
+  <div class="header__top">
+    <div class="address" data-accordion>
+      <button class="address-btn" type="button" data-accordion-btn aria-label="4 Клиники">
+        4 Клиники
+      </button>
+      <!--  -->
+      <ul>
+        <li>
+          <a href="#">
+            <address>Новосибирск, ул. Сакко и&nbsp;Ванцетти, д.&nbsp;77</address>
+            <span>Ежедневно&nbsp;9:00&nbsp;- 20:00</span>
+          </a>
+        </li>
+        <!--  -->
+        <li>
+          <a href="#">
+            <address>Новосибирск, ул. Крылова, д.&nbsp;63</address>
+            <span>Пн-Пт 9:00&nbsp;- 21:00, Сб-Вс 9:00&nbsp;- 20:00</span>
+          </a>
+        </li>
+        <!--  -->
+        <li>
+          <a href="#">
+            <address>Новосибирск, ул. Степная, д.&nbsp;6</address>
+            <span>Ежедневно&nbsp;9:00&nbsp;- 20:00</span>
+          </a>
+        </li>
+        <!--  -->
+        <li>
+          <a href="#">
+            <address>Кемерово, ул. Тухачевского, 19А</address>
+            <span>Вс-Пн выходной, Вт-Сб 10&nbsp;- 18</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!--  -->
+    <div class="search">
+      <form class="" action="#" method="get">
+        <fieldset>
+          <label class="search__label visually-hidden" for="search__input">Поиск</label>
+          <input id="search__input" type="text" name="search" placeholder="Поиск" autocomplete="off" value="">
+        </fieldset>
+        <button class="search__submit" type="submit">
+          <span class="visually-hidden">Поиск</span>
+          <svg width="20" height="20">
+            <use xlink:href="img/sprite_auto.svg#search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+    <!--  -->
+    <a class="header__shop" href="#" aria-label="Интернет-магазин">Интернет-магазин</a>
+  </div>
+  <!--  -->
+  <div class="header__mid">
+    <a class="header__mid-logo" @@if (!context.main) { href="main.html" } aria-label="Переход на главную">
+      <img src="img/content/logo.png" alt="Логотип" width="220" height="50">
+    </a>
+    <!--  -->
+    <a class="header__mid-registration" href="#" aria-label="Записаться онлайн">Записаться онлайн</a>
+    <!--  -->
+    <p>Ежедневно <span>09:00 – 21:00</span></p>
+    <!--  -->
+    <div class="header__mid-phone">
+      <p>(383) 209-17-18</p>
+      <a href="#" data-modal="call-back" aria-label="Обратный звонок">Обратный звонок</a>
+    </div>
+    <!--  -->
+    <a class="header__mid-messenger" href="#" aria-label="whatsapp">
+      <svg width="46" height="46">
+        <use xlink:href="img/sprite_auto.svg#whatsapp"></use>
+      </svg>
+    </a>
+    <!--  -->
+    <a class="header__mid-messenger" href="#" aria-label="telegram">
+      <svg width="46" height="46">
+        <use xlink:href="img/sprite_auto.svg#telegram"></use>
+      </svg>
+    </a>
+  </div>
+  <nav class="main-nav">
+    <button class="main-nav__toggle btn-reset" type="button" aria-label="Переключатель отображения меню"
+      aria-pressed="false">
+      <svg width="20" height="20">
+        <use xlink:href="#icon-burger"></use>
+      </svg>
+    </button>
+    <ul class="main-nav__list">
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.headerActiveLinkIndex === 0) { main-nav__link--active }"
+        @@if (context.headerActiveLinkIndex !==0) { href="main.html#about" }>
+          О клинике
+        </a>
+      </li>
+      <!--  -->
+      <li class="main-nav__item main-nav__item--btn" data-accordion>
+        <!-- opened -->
+        <button class="main-nav__link main-nav__link--btn" type="button" data-accordion-btn>
+          <!-- main-nav__link--arrow-rotate-->
+          Услуги
+        </button>
+        <div class="main-nav__container-services">
+          <ul class="main-nav__list-services">
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 7) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==7) { href="#" }>
+                Ночные линзы
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 8) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==8) { href="#" }>
+                Диагностика зрения
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 9) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==9) { href="#" }>
+                Аппаратное лечение
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 10) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==10) { href="#" }>
+                Доставка
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 11) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==11) { href="#" }>
+                Офтальмолог
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 12) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==12) { href="#" }>
+                Детский офтальмолог
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 13) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==13) { href="#" }>
+                Коррекция зрения
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 14) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==14) { href="#" }>
+                Лечение конъюнктивита
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 15) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==15) { href="#" }>
+                Подбор линз
+              </a>
+            </li>
+          </ul>
+          <!--  -->
+          <ul class="main-nav__list-services">
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 16) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==16) { href="#" }>
+                Проверить зрение ребенку
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 17) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==17) { href="#" }>
+                Синдром сухого глаза лечение
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 18) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==18) { href="#" }>
+                Халязион лечение
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 19) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==19) { href="#" }>
+                Компьютерная диагностика зрения
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 20) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==20) { href="#" }>
+                Лечение конъюнктивита у ребенка
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 21) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==21) { href="#" }>
+                Блефарит лечение
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 22) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==22) { href="#" }>
+                Астигматизм лечение у взрослых
+              </a>
+            </li>
+            <!--  -->
+            <li class="main-nav__item-services">
+              <a class="main-nav__link-services @@if (context.headerActiveLinkIndex === 23) { main-nav__link-services--active }"
+                @@if (context.headerActiveLinkIndex !==23) { href="#" }>
+                Аппаратное лечение зрения у детей
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <!--  -->
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.headerActiveLinkIndex === 1) { main-nav__link--active }"
+        @@if (context.headerActiveLinkIndex !==1) { href="main.html#night-lenses" }>
+          Ночные линзы
+        </a>
+      </li>
+      <!--  -->
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.headerActiveLinkIndex === 2) { main-nav__link--active }"
+        @@if (context.headerActiveLinkIndex !==2) { href="#" }>
+          Врачи
+        </a>
+      </li>
+      <!--  -->
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.headerActiveLinkIndex === 3) { main-nav__link--active }"
+        @@if (context.headerActiveLinkIndex !==3) { href="#" }>
+          Цены
+        </a>
+      </li>
+      <!--  -->
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.headerActiveLinkIndex === 4) { main-nav__link--active }"
+        @@if (context.headerActiveLinkIndex !==4) { href="main.html#reviews" }>
+          Отзывы
+        </a>
+      </li>
+      <!--  -->
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.headerActiveLinkIndex === 5) { main-nav__link--active }"
+        @@if (context.headerActiveLinkIndex !==5) { href="#" }>
+          Вопросы и ответы
+        </a>
+      </li>
+      <!--  -->
+      <li class="main-nav__item">
+        <a class="main-nav__link @@if (context.headerActiveLinkIndex === 6) { main-nav__link--active }"
+        @@if (context.headerActiveLinkIndex !==6) { href="#" }>
+          Контакты
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

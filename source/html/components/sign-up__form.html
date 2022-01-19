@@ -1,0 +1,59 @@
+<div class="form @@if (context.mod) {form--@@mod}">
+  <form action="https://echo.htmlacademy.ru" method="post" target="blanck">
+    <h3>@@Title</h3>
+    <div class="form__grid-container">
+      <fieldset>
+        <label>
+          <span class="visually-hidden">Ваше имя</span>
+          <input type="text" name="name" placeholder="Имя" aria-label="Ведите ваше имя" autocomplete="off">
+          <span class="text-error"></span>
+        </label>
+      </fieldset>
+      <!--  -->
+      <fieldset>
+        <label>
+          <span class="visually-hidden">Ваш телефон</span>
+          <input type="tel" name="tel" placeholder="Телефон" title="+7 (___) ___-__-__"
+            aria-label="Ведите ваше телефон">
+          <span class="text-error"></span>
+        </label>
+      </fieldset>
+      <!--  -->
+      <fieldset class="form__select-container">
+        <select name="select" class="form-select" data-show-selected data-scroll aria-label="Выберите услугу">
+          <option value="" selected>Услуга</option>
+          <option value="2">Ночные линзы</option>
+          <option value="3">Диагностика зрения</option>
+          <option value="4">Аппаратное лечение</option>
+          <option value="5">Доставка</option>
+          <option value="6">Офтальмолог</option>
+          <option value="7">Детский офтальмолог</option>
+          <option value="8">Коррекция зрения</option>
+          <option value="9">Лечение конъюнктивита</option>
+          <option value="10">Подбор линз</option>
+          <option value="11">Проверить зрение ребенку</option>
+          <option value="12">Синдром сухого глаза лечение</option>
+          <option value="13">Халязион лечение</option>
+          <option value="14">Компьютерная диагностика зрения</option>
+          <option value="15">Лечение конъюнктивита у ребенка</option>
+          <option value="16">Блефарит лечение</option>
+          <option value="17">Астигматизм лечение у взрослых</option>
+          <option value="18">Аппаратное лечение зрения у детей</option>
+        </select>
+      </fieldset>
+      <!--  -->
+      <fieldset class="form__date">
+        <label>
+          <span class="visually-hidden">Выберите дату</span>
+          <input type="text" name="date" placeholder="Выберите дату" aria-label="Выберите дату">
+          <span class="text-error"></span>
+        </label>
+      </fieldset>
+      <!--  -->
+      <button class="form__submit btn" type="submit" aria-label="@@Submit-text">@@Submit-text</button>
+    </div>
+    <p>Отправляя форму, ты&nbsp;соглашаешься с
+      <a href="#" aria-label="политикой конфиденциальности">политикой конфиденциальности.</a>
+    </p>
+  </form>
+</div>

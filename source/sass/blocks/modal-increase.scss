@@ -1,0 +1,15 @@
+.modal.modal--increase .modal__content {
+  border-radius: 20px;
+}
+
+.modal.modal--increase .modal__close-btn {
+  top: 15px;
+  right: 15px;
+}
+
+.modal.modal--increase .modal-increase {
+  background-image: url("../img/svg/loading.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
